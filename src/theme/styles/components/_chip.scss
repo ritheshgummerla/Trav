@@ -1,0 +1,70 @@
+.chip {
+  @apply mt-4 mx-2;
+  &.MuiChip-root {
+    @apply h-32 py-2 font-roboto  rounded-2 bg-nc-6 text-nc-3 text-14 opacity-80;
+    &:hover,&:focus{
+      @apply opacity-100;
+    }
+    &.nc-4{
+      @apply text-nc-4;
+      background: var(--nc-6);
+      .MuiIconButton-label{
+        span{
+          @apply text-nc-4;
+        }
+      }
+    }
+    &.tc-1{
+      @apply text-tc-1;
+      background: var(--tint-tc-1-2);
+      .MuiIconButton-label{
+        span{
+          @apply text-tc-1;
+        }
+      }
+    }
+    &.tc-2{
+      @apply text-tc-2;
+      background: var(--tint-tc-2-2);
+      .MuiIconButton-label{
+        span{
+          @apply text-tc-2;
+        }
+      }
+    }
+    &.tc-3{
+      @apply text-tc-3;
+      background: var(--tint-tc-3-2);
+      .MuiIconButton-label{
+        span{
+          @apply text-tc-3;
+        }
+      }
+    }
+    &.tc-4{
+      @apply text-tc-4;
+      background: var(--tint-tc-4-2);
+      .MuiIconButton-label{
+        span{
+          @apply text-tc-4;
+        }
+      }
+    }
+  }
+  .MuiChip-label {
+    @apply overflow-auto whitespace-normal break-words break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 200px;
+  }
+  &.round{
+    @apply rounded-full text-10 h-24;
+    .MuiIconButton-label{
+      span{
+        font-size: 8px;
+      }
+    }
+  }
+}

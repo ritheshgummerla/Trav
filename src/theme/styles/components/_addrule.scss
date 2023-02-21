@@ -1,0 +1,14 @@
+.add-rule-content{
+  @apply bg-nc-6;
+  .search-box{
+    @apply w-full border-b border-b-nc-5 bg-nc-6;
+    .search,.MuiInput-root{
+      width: calc(100% - 36px);
+    }
+  }
+}
+
+.right.global-search .search-box {
+  height: 35px;
+  padding-top: 0px;
+}

@@ -1,0 +1,674 @@
+/* Label Field */
+.MuiInputLabel-root {
+    @apply text-nc-3 text-16 font-roboto;
+  
+    &.Mui-focused {
+      @apply text-tc-1;
+    }
+  
+    &.MuiInputLabel-shrink {
+      @apply text-14;
+    }
+  
+    &.Mui-error {
+      @apply text-tc-4;
+    }
+  }
+  
+  .input-field-error {
+    @apply text-tc-4 text-12 font-roboto mt-2;
+  }
+  
+  .input-label {
+    &.sm {
+      @apply text-12;
+    }
+  }
+  
+  /* Text Field */
+  .input-field {
+    @apply w-full mt-4;
+    .MuiOutlinedInput-adornedEnd {
+      @apply pr-0;
+    }
+    .MuiFormHelperText-contained{
+      @apply m-0;
+    }
+    /* Label */
+    .MuiInputLabel-root {
+      transform: translate(14px, 21px);
+  
+      &.MuiInputLabel-shrink {
+        transform: translate(14px, -6px);
+      }
+    }
+  
+    /* Input */
+    .MuiInputBase-input {
+      @apply text-nc-1 text-16 font-roboto;
+      padding: 19px 14px 18px;
+    }
+  
+    /* Fieldset */
+    .MuiOutlinedInput-root {
+      @apply rounded-2;
+      .MuiOutlinedInput-notchedOutline {
+        @apply border border-solid border-nc-5;
+  
+        legend {
+          @apply text-14;
+          height: 14px;
+        }
+      }
+  
+      &:hover:not(.Mui-disabled) .MuiOutlinedInput-notchedOutline {
+        @apply border-sc-1;
+      }
+  
+      &.Mui-focused,
+      &.Mui-focused:hover:not(.Mui-disabled) {
+        .MuiOutlinedInput-notchedOutline {
+          @apply border-2 border-tc-1;
+        }
+      }
+      &.Mui-error {
+        .MuiOutlinedInput-notchedOutline {
+          @apply border-tc-4;
+        }
+        &:hover:not(.Mui-disabled) .MuiOutlinedInput-notchedOutline {
+          @apply border-tc-4;
+        }
+        &.Mui-focused,
+        &.Mui-focused:hover:not(.Mui-disabled) {
+          .MuiOutlinedInput-notchedOutline {
+            @apply border-tc-4;
+          }
+        }
+      }
+    }
+  
+    /* Small */
+    &.sm {
+      /* Label */
+      .MuiInputLabel-root {
+        @apply text-14;
+        transform: translate(14px, 13px);
+  
+        &.MuiInputLabel-shrink {
+          transform: translate(14px, -6px);
+          @apply text-12;
+        }
+      }
+  
+      /* Input */
+      .MuiInputBase-input {
+        @apply text-14;
+        padding: 12px 14px;
+        @media (max-width: 767px) {
+          font-size: 16px;       
+        }
+      }
+  
+      /* Fieldset */
+      .MuiOutlinedInput-root {
+        .MuiOutlinedInput-notchedOutline {
+          legend {
+            @apply text-12;
+            height: 12px;
+          }
+        }
+      }
+    }
+  
+    &.input-no-border {
+      .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+        @apply border-none;
+      }
+    }
+    &.input-border-top-bottom {
+      .MuiOutlinedInput-root {
+        @apply rounded-none;
+        &.Mui-focused,
+        &.Mui-focused:hover:not(.Mui-disabled) {
+          .MuiOutlinedInput-notchedOutline {
+            @apply border-0 border-t-2 border-b-2 border-tc-1;
+          }
+        }
+        .MuiOutlinedInput-notchedOutline {
+          @apply border-0 border-t border-b border-nc-5;
+        }
+      }
+    }
+    &.start-icon {
+      .MuiInputBase-input,
+      .MuiOutlinedInput-adornedStart {
+        @apply pl-0;
+      }
+      .MuiInputAdornment-positionStart {
+        @apply text-16 text-nc-5;
+      }
+    }
+    &.multiline{
+      .MuiFormHelperText-root{
+        color:#f44336;
+      }
+      
+    }
+  }
+  
+  .input-field-normal {
+    @apply border border-solid border-nc-5 rounded-2;
+  
+    .MuiInputBase-root {
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  
+    /* Input */
+    .MuiInputBase-input {
+      @apply text-nc-1 text-16 font-roboto;
+      padding: 19px 14px 18px;
+    }
+  
+    &.sm {
+      /* Input */
+      .MuiInputBase-input {
+        @apply text-14;
+        padding: 8px 14px;
+        @media (max-width: 767px) {
+          font-size: 16px;       
+        }
+      }
+    }
+  }
+  
+  /* Select Field */
+  .input-select-wrapper {
+    @apply w-full;
+    /* Label */
+    .input-select-label {
+      &.MuiInputLabel-root {
+      @apply text-14;
+        transform: translate(14px, 20px);
+  
+        &.MuiInputLabel-shrink {
+          transform: translate(14px, -3px);
+        }
+      }
+  
+      &.sm {
+        /* Label */
+        &.MuiInputLabel-root {
+          @apply text-14;
+          transform: translate(14px, 11px);
+  
+          &.MuiInputLabel-shrink {
+            transform: translate(14px, -3px);
+            @apply text-12;
+          }
+        }
+      }
+    }
+  
+    /* Select Field */
+    .input-select {
+      @apply w-full;
+  
+      /* Input */
+      .MuiInputBase-input {
+        @apply text-nc-1 text-14 font-roboto relative bg-transparent;
+        padding: 12px 32px 12px 12px;
+  
+        &::after {
+          content: "\e906";
+          @apply w-24 h-24 absolute right-8 font-icon text-12 text-nc-2 mt-1;
+          line-height: 24px;
+          top: 50%;
+          transform: translateY(-50%);
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+  
+      /* Icon */
+      .MuiSelect-icon {
+        @apply hidden;
+      }
+  
+      /* Fieldset */
+      &.MuiOutlinedInput-root {
+        @apply rounded-2;
+        .MuiOutlinedInput-notchedOutline {
+          @apply border border-solid border-nc-5;
+  
+          legend {
+            @apply text-14;
+            height: 14px;
+          }
+        }
+  
+        &:hover:not(.Mui-disabled) {
+          .MuiOutlinedInput-notchedOutline {
+            @apply border-sc-1;
+          }
+          .MuiInputBase-input {
+            @apply bg-transparent;
+            &::after {
+              @apply text-nc-1;
+            }
+          }
+        }
+  
+        &.Mui-focused,
+        &.Mui-focused:hover:not(.Mui-disabled) {
+          .MuiOutlinedInput-notchedOutline {
+            @apply border-2 border-tc-1;
+          }
+          .MuiInputBase-input {
+            @apply bg-transparent;
+            &::after {
+              @apply text-tc-1;
+            }
+          }
+        }
+        &.Mui-error {
+          .MuiOutlinedInput-notchedOutline {
+            @apply border-tc-4;
+          }
+          .MuiInputBase-input {
+            &::after {
+              @apply text-tc-4;
+            }
+          }
+          &.Mui-focused,
+          &.Mui-focused:hover:not(.Mui-disabled),
+          &:hover:not(.Mui-disabled) {
+            .MuiOutlinedInput-notchedOutline {
+              @apply border-tc-4;
+            }
+            .MuiInputBase-input {
+              &::after {
+                @apply text-tc-4;
+              }
+            }
+          }
+        }
+      }
+  
+      /* Small */
+      &.sm {
+        height: 36px;
+        /* Input */
+        .MuiInputBase-input {
+          @apply text-14;
+          padding: 9px 32px 9px 14px;
+          @media (max-width: 767px) {
+            font-size: 16px;       
+          }
+        }
+  
+        /* Fieldset */
+        &.MuiOutlinedInput-root {
+          .MuiOutlinedInput-notchedOutline {
+            legend {
+              @apply text-12;
+              height: 12px;
+            }
+          }
+        }
+      }
+  
+      &.Mui-error {
+        /* Label */
+        .input-select-label {
+          &.MuiInputLabel-root {
+            @apply text-tc-4;
+          }
+        }
+      }
+    }
+  }
+  .multiline{
+    .MuiOutlinedInput-multiline{
+      @apply p-0;
+    }
+  }
+  .input-select-normal {
+    @apply border-0;
+  
+    &.MuiInput-underline {
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  
+    /* Input */
+    .MuiInputBase-input {
+      @apply text-nc-3 text-12 font-roboto p-4 pr-24 relative;
+      @media (max-width: 767px) {
+        font-size: 16px;       
+      }
+  
+      &::after {
+        content: "\e918";
+        @apply w-24 h-24 absolute right-0 top-0 font-icon text-12;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 26px;
+      }
+    }
+  
+    &:hover:not(.Mui-disabled),
+    &.Mui-focused:not(.Mui-disabled) {
+      .MuiInputBase-input {
+        @apply text-tc-1 bg-nc-1;
+      }
+    }
+  
+    /* Icon */
+    .MuiSelect-icon {
+      @apply hidden;
+    }
+  }
+  
+  /* Autocomplete Field - Start*/
+  .autocomplete-field {
+    .MuiAutocomplete-endAdornment .MuiAutocomplete-popupIndicator {
+      svg {
+        @apply invisible;
+      }
+      .MuiIconButton-label:after {
+        content: "\e918";
+        @apply w-24 h-24 absolute right-0 font-icon text-12 text-nc-2 mt-1;
+        line-height: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  
+    &.sm {
+      .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+        @apply py-0;
+      }
+    }
+  
+    .MuiAutocomplete-tag {
+      @apply bg-nc-1 h-28 rounded-2;
+      margin: 6px 4px 0px;
+  
+      .MuiChip-label {
+        @apply text-12 text-nc-3 pl-12 pr-6;
+      }
+      .MuiChip-deleteIcon {
+        @apply w-24 h-24 text-nc-5;
+      }
+    }
+    &.chip-count {
+      span.MuiAutocomplete-tag {
+        @apply p-4 text-center h-auto w-auto text-nc-3 rounded-full;
+        margin: 6px 4px 0px;
+        vertical-align: middle;
+        align-items: center;
+        line-height: normal;
+      }
+    }
+    &.cstm-state-field {
+      .MuiInputBase-input {
+        
+      }
+    }
+  }
+  .MuiAutocomplete-popper {
+    z-index: 1700;
+    box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.16);
+  
+    .MuiAutocomplete-listbox {
+      @apply p-0 pt-8 pb-8;
+      max-height: 200px;
+      box-shadow: none;
+    }
+  
+    .MuiAutocomplete-option {
+      @apply text-12 text-nc-2 pl-16 pt-6 pb-6 pr-12 border-b border-solid border-nc-6;
+  
+      &[aria-selected="true"]:not(.Mui-disabled) {
+        @apply bg-nc-1 text-tc-1;
+      }
+      &:hover:not(.Mui-disabled),
+      &.Mui-focusVisible:not(.Mui-disabled) {
+        @apply bg-nc-1;
+      }
+    }
+    .MuiAutocomplete-option:last-child {
+      @apply border-b-0;
+    }
+  }
+  /* Autocomplete Field - End*/
+  
+  /* inc-dec-field - start */
+  .inc-dec-field {
+    .btn-inc {
+      @apply btn-icon md border border-solid border-nc-5 text-nc-4 hover:bg-tc-1 hover:text-nc-7 flex-none;
+    }
+    .btn-inc:first-child {
+      @apply rounded-l-4 rounded-r-none;
+    }
+    .btn-inc:last-child {
+      @apply rounded-r-4 rounded-l-none;
+    }
+    .input-field-normal {
+      @apply flex-grow rounded-none leading-none border-l-0 border-r-0;
+  
+      /* Input */
+      .MuiInputBase-input {
+        @apply font-bold text-center;
+        padding: 9px 14px;
+        height: 16px;
+      }
+    }
+  }
+  /* inc-dec-field - end */
+  
+  /*  Checkbox - Start */
+  .checkbox {
+    @apply block;
+    &.MuiIconButton-root:hover,
+    .MuiIconButton-root:hover {
+      background-color: rgba($tc-1, 0.04);
+    }
+    &.MuiCheckbox-root,
+    .MuiCheckbox-root {
+      @apply text-tc-1;
+    }
+    .MuiFormControlLabel-label {
+      @apply text-14 text-nc-1;
+    }
+    .unCheckedIcon {
+      @apply h-20 w-20 border-2 border-nc-5 rounded-2;
+    }
+    .checkedIcon {
+      @apply h-20 w-20 rounded-2 bg-tc-1;
+      &:before {
+        @apply absolute border-solid border-t-2 border-r-2 border-nc-7;
+        content: "";
+        transform: rotate(135deg);
+        width: 12px;
+        height: 6px;
+        left: 13px;
+        top: 14px;
+      }
+    }
+    &.Mui-disabled {
+      @apply opacity-40;
+    }
+    &.--mt-0 {
+      .MuiCheckbox-root {
+        @apply mt-0;
+      }
+    }
+  }
+  /*  Checkbox - End */
+  
+  /*  Radio - Start */
+  .radio {
+    &.MuiIconButton-root:hover,
+    .MuiIconButton-root:hover {
+      background-color: rgba($tc-1, 0.04);
+    }
+    &.MuiRadio-root,
+    .MuiRadio-root {
+      @apply text-tc-1;
+    }
+    .MuiFormControlLabel-label {
+      @apply text-14 text-nc-1;
+    }
+    .unCheckedIcon {
+      @apply h-16 w-16 border-2 border-nc-4 rounded-full;
+    }
+    .checkedIcon {
+      @apply h-16 w-16 rounded-full bg-tc-1;
+      &:before {
+        @apply absolute border-solid border-t-2 border-r-2 border-nc-7;
+        content: "";
+        transform: rotate(135deg);
+        width: 8px;
+        height: 5px;
+        left: 13px;
+        top: 14px;
+      }
+    }
+  
+    &.label-bold {
+      .MuiFormControlLabel-label {
+        @apply font-extra-bold font-barlow text-nc-2;
+      }
+    }
+  
+    &.Mui-disabled {
+      @apply opacity-40;
+    }
+  }
+  /*  Radio - End */
+  
+  .dd-search-suggestions {
+    @apply absolute w-full bg-nc-7 z-10 shadow-md rounded-bl-4 rounded-br-4 mt-2 pb-4 overflow-y-auto block;
+    max-height: 300px;
+    .header {
+      @apply py-10 font-bold border-b border-nc-6 px-12;
+    }
+    .sugegstions-list {
+      @apply px-12 border-b border-nc-6;
+  
+      &:last-of-type {
+        @apply border-0;
+      }
+    }
+  }
+
+  /* search-box Input */
+  .filter .right .search-box,.add-rule-content .search-box{
+    @apply float-left  border-0 rounded-2 h-[45px] w-full pt-6;
+    .MuiFormControl-root{
+      @apply mr-0;
+      .input-select{
+        @apply rounded-none;
+        &.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline{
+          @apply border-0;
+        }
+      }
+      .input-select-label.sm.MuiInputLabel-root.MuiInputLabel-shrink{
+        display: none;
+      }
+    }
+    .search{
+      min-width: 180px;
+      height: 35px;
+      .MuiInputBase-input{
+        @apply text-14;
+      }
+      @apply border-l border-nc-5 pl-6;
+      label{
+        display: none;
+      }
+      .MuiInput-underline:before,.MuiInput-underline:after{
+        @apply border-0;
+      }
+      .MuiInputLabel-shrink {
+        transform: translate(0, 10.5px) scale(1.0);
+        padding-left: 8px;
+      }
+      label + .MuiInput-formControl {
+          margin-top: 1px;
+      }
+      .MuiInputLabel-root.Mui-focused {
+        color: var(--tc-1);
+        display: none;
+    }
+    }
+    .search-icon{
+        box-shadow: none;
+        height: 35px;
+        border-radius: 0 2px 2px 0;
+    }
+    .dq-icon-search{
+      @apply p-14 relative text-16 top-4 pr-4;
+    }
+  }
+
+/* Custom Tag Component */
+.custom-tag{
+  @apply relative;
+    .tag-label{
+      @apply absolute bg-nc-7 text-12 text-nc-3 left-10 -top-10 px-6;
+    }
+  .rti--container {
+    --rti-bg: var(--nc-7);
+    --rti-border: var(--nc-5);
+    --rti-main: #3182ce;
+    --rti-radius: 2px;
+    --rti-s: .5rem;
+    --rti-tag: var(--tint-tc-1-2);
+    color:var(--tc-1);
+    --rti-tag-remove: var(--pc-1);
+    --rti-tag-padding: 5px 10px;
+    align-items: flex-start;
+    background: var(--rti-bg);
+    border: 1px solid var(--rti-border);
+    border-radius: var(--rti-radius);
+    display: block;
+    flex-wrap: wrap;
+    gap: var(--rti-s);
+    line-height: 1.4;
+    padding: 15px 10px 10px 15px;
+    margin-top: 4px;
+    min-height: 62px;
+    width: 100%;
+    max-height: 62px;
+    overflow: auto;
+    .rti--tag{
+      margin-right: 5px;
+      margin-bottom: 5px;
+      max-width: calc(100% - 5px);
+      position: relative;
+      border-radius: 50px;
+      span{
+        text-overflow: ellipsis;
+      display: block;
+      overflow: hidden;
+      padding-right: 20px;
+      }
+      button{
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
+.global-search{
+  @apply w-[30%];
+}

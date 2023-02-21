@@ -1,0 +1,62 @@
+.MuiPopover-paper {
+  box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.16);
+}
+
+.menu-list,
+.MuiMenu-list {
+  @apply p-0 pt-8 pb-8;
+  min-width: 180px;
+
+  .MuiMenuItem-root {
+    @apply text-14 text-nc-1 pl-16 pt-6 pb-6 pr-12 border-b border-solid border-nc-6;
+
+    &.Mui-selected:not(.Mui-disabled) {
+      @apply bg-nc-6 text-sc-1;
+    }
+    &:hover:not(.Mui-disabled),
+    &.Mui-focusVisible:not(.Mui-disabled) {
+      @apply bg-nc-6 text-sc-1;
+    }
+  }
+  .MuiMenuItem-root:last-child {
+    @apply border-b-0;
+  }
+}
+
+/* DropDown Button Start */
+.dropdown-btn {
+  @apply rounded-none justify-between text-12 text-nc-3 normal-case p-4;
+  &::after {
+    content: '\e906';
+    @apply text-nc-3 w-24 h-24 absolute right-0 top-4 font-icon text-12 align-middle text-center;
+    line-height: 24px;
+  }
+
+  &:hover:not(.Mui-disabled),
+  &.Mui-focused:not(.Mui-disabled) {
+    @apply text-tc-1 bg-pc-1;
+  }
+  &.w-245 {
+    width: 245px;
+  }
+}
+/* DropDown Button End */
+
+/* DropDown Menu Start */
+.dropdown-menu {
+  .MuiPopover-paper {
+    @apply bg-nc-7 rounded-tl-none rounded-tr-none;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,1%);
+    &:before {
+      content: '';
+      @apply absolute h-1 w-full bg-nc-6;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    }
+  }
+  &.w-300 {
+    .MuiPopover-paper {
+      width: 300px;
+    }
+  }
+}
+/* DropDown Menu End */

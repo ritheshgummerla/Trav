@@ -1,0 +1,75 @@
+.badge {
+  &.badge-primary {
+    @apply font-roboto rounded-full text-nc-1 bg-tint-pc-1-2 text-12 font-bold pt-2 pb-2 pl-16 pr-16;
+  }
+  &.badge-primary-small {
+    @apply rounded-full text-nc-1 bg-tint-pc-1-1 text-10 font-bold pt-1 pb-1 pl-6 pr-6;
+  }
+  &.badge-gray {
+    @apply rounded-full text-nc-3 bg-nc-6 text-10 font-bold pt-1 pb-1 pl-6 pr-6;
+  }
+  &.badge-plain {
+    @apply text-nc-2 text-10 font-bold p-2;
+  }
+  &.badge-text-10 {
+    @apply text-10;
+  }
+
+  &.live {
+    @apply text-nc-7 bg-tc-4 text-12 font-bold pt-4 pb-4 pl-28 pr-16 rounded-l-full;
+    position: relative;
+    &::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      @apply rounded-full bg-nc-7 animate-pulse;
+    }
+  }
+
+  &.badge-profile {
+    @apply text-nc-2 bg-nc-6 text-12 font-extra-bold font-barlow uppercase;
+
+    &.small {
+      @apply text-12 w-32 h-32;
+    }
+  }
+
+  &.badge-new {
+    @apply text-nc-7 text-12 font-bold pt-4 pb-4 pl-24 pr-20 rounded-l-full;
+    background-repeat: no-repeat;
+    background: linear-gradient(
+      -45deg,
+      var(--sc-1) 0%,
+      var(--sc-1) 45%,
+      var(--tint-sc-1-1) 48%,
+      var(--tint-sc-1-2) 50%,
+      var(--tint-sc-1-1) 52%,
+      var(--sc-1) 55%,
+      var(--sc-1) 100%
+    );
+    background-position: 0 -100%;
+    background-size: 400% 100%;
+    animation: ShineAnimation 5s ease-in-out infinite;
+  }
+
+  &.badge-hot {
+    @apply w-32 h-32 inline-block;
+  }
+  &.badge-bid {
+    @apply w-24 h-24 inline-block;
+  }
+}
+
+/* Animate Background*/
+@keyframes ShineAnimation {
+  0% {
+    background-position: 0 -100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}

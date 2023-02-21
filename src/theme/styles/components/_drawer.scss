@@ -1,0 +1,234 @@
+.drawer {
+  .MuiDrawer-paper {
+    @apply absolute;
+  }
+
+  &.add-project {
+    .MuiDrawer-paper {
+      width: 400px;
+    }
+
+    .drawer__body {
+      @apply block;
+    }
+
+    .footer {
+      @apply flex justify-end px-20 py-12 border-t border-t-nc-5;
+    }
+  }
+
+  &.ExecutedData {
+    .MuiDrawer-paper {
+      width: calc(100% - 100px);
+    }
+
+    .drawer__body {
+      @apply block m-0;
+
+      .datatable {
+        @apply w-full p-0;
+
+        .dashboard-right {
+          @apply m-0 border-0 p-0;
+
+          .search-drawer {
+            @apply w-full h-52 relative flex items-center border-b border-b-nc-5;
+          }
+        }
+
+        .projectdashboard {
+          @apply m-0;
+        }
+
+        table tbody td {
+          @apply px-16 text-14;
+        }
+      }
+    }
+  }
+
+  &.EditSuites {
+    .MuiDrawer-paper {
+      width: calc(100% - 50%);
+    }
+
+    .drawer__body {
+      @apply block m-0;
+
+      .datatable {
+        @apply w-full p-0;
+
+        .dashboard-right {
+          @apply m-0 border-0 p-0;
+
+          .search {
+            @apply inline;
+          }
+
+          .search-drawer {
+            @apply w-full h-52 relative flex items-center border-b border-b-nc-5;
+
+            .global-search {
+              @apply w-full;
+            }
+          }
+        }
+
+        .checkbox-list {
+          max-height: calc(100vh - 295px);
+          min-height: calc(100vh - 295px);
+          overflow: auto;
+          &.collapse{
+            max-height: calc(100vh - 450px);
+            min-height: calc(100vh - 450px);
+            visibility: unset;
+          }
+        }
+
+        .selected-suites {
+          @apply h-[74px] block py-14 px-18 bg-tint-sc-1-3 overflow-hidden;
+
+          .selected-rule {
+            p {
+              @apply font-roboto text-nc-1 text-14;
+            }
+
+            .block-design {
+              @apply relative w-full pr-28;
+
+              .expand-collpase-arrow {
+                @apply absolute right-0 top-8;
+                span{
+                  .dq-icon-down_cheveron{
+                    @apply text-sc-1;
+                    transform: rotate(180deg);
+                  }
+                }
+              }
+            }
+          }
+          &.expand{
+            height: 280px;
+          }
+        }
+
+        .projectdashboard {
+          @apply m-0;
+        }
+
+        table tbody td {
+          @apply px-16 text-14;
+        }
+      }
+    }
+  }
+
+  .drawer__header {
+    @apply flex items-center py-14 pl-14 pl-20 pr-20 border-b border-nc-6 justify-between;
+
+    .drawer__header__title {
+      @apply text-16 font-extra-bold font-barlow text-pc-1 mr-8;
+    }
+  }
+
+  .drawer__body {
+    @apply mt-12 ml-20 mr-20 overflow-y-auto flex-1 flex;
+
+    // /* width */
+    // &::-webkit-scrollbar {
+    //   @apply w-6;
+    // }
+
+    // /* Track */
+    // &::-webkit-scrollbar-track {
+    //   @apply bg-nc-7;
+    // }
+
+    // /* Handle */
+    // &::-webkit-scrollbar-thumb {
+    //   @apply bg-nc-4 rounded-full;
+    // }
+
+    // /* Handle on hover */
+    // &::-webkit-scrollbar-thumb:hover {
+    //   @apply bg-nc-3;
+    // }
+
+  }
+
+  .MuiDrawer-paper {
+    @apply h-full w-full;
+
+    @screen sm {
+      width: 280px;
+    }
+  }
+
+  .MuiDrawer-paperAnchorRight {
+    @apply border-0 flex;
+  }
+
+  &.custom-drawer {
+    .MuiDrawer-paper {
+      width: 60%;
+    }
+
+    .drawer__body {
+      @apply block m-0;
+      height: calc(100vh - 135px);
+      overflow: auto;
+    }
+
+    .model-body {
+      @apply p-14 px-20;
+    }
+
+    .footer.MuiDialogActions-root {
+      @apply absolute bottom-0 w-full p-14 px-20;
+    }
+
+    .MuiDialogContent-root {
+      @apply p-0;
+    }
+
+    .MuiDialogActions-root {
+      flex: 0 0 auto;
+      display: flex;
+      padding: 8px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.drawer__header {
+  @apply flex items-center pb-8 border-b border-nc-6;
+
+  .drawer__header__title {
+    @apply text-16 font-extra-bold text-nc-2 mr-8;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .title {
+      @apply font-barlow;
+    }
+  }
+}
+
+.height-set-drawer-runs {
+  height: calc(100vh - 110px);
+  overflow: auto;
+}
+.add-suite-drawer{
+  .drawer__body{
+    @apply overflow-hidden;
+  .datatable{
+    .scroll-table-data.add-suite-datatable{
+      @apply overflow-hidden h-full;
+    }
+  }
+  }
+}

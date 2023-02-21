@@ -1,0 +1,58 @@
+.rule-list {
+    @apply p-20 relative;
+    height: calc(100vh - 230px);
+    overflow: auto;
+
+    p {
+        @apply font-barlow font-extra-bold text-16 text-nc-3 pb-4;
+    }
+
+    span {
+        @apply font-roboto font-normal text-14 text-nc-4 pb-4 relative top-1;
+    }
+
+    .form-rule {
+        @apply mt-6 grid pb-10;
+        column-gap: 15px;
+        overflow: auto;
+        overflow-y: hidden;
+        grid-template-columns: 18% 19% 19% 19% 19%;
+        row-gap: 15px;
+
+        .w-160 {
+            width: 160px;
+            min-width: 160px;
+        }
+
+        .w-180 {
+            width: 100%;
+            min-width: 100%;
+        }
+
+        .w-100 {
+            width: 100px;
+            min-width: 100px;
+        }
+
+        .input-select {
+            height: 40px;
+        }
+    }
+
+    .seprater-line {
+        @apply block w-full h-1 my-14 bg-nc-6;
+    }
+
+    .right {
+        @apply flex absolute right-0 top-0;
+
+        .action span {
+            @apply pb-0;
+            padding-bottom: 0;
+
+            &.xs {
+                @apply text-10;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+h1 {
+  @apply text-32;
+}
+h2 {
+  @apply text-28;
+}
+h3 {
+  @apply text-24;
+}
+h4 {
+  @apply text-18;
+}
+h5 {
+  @apply text-16;
+}
+h6 {
+  @apply text-14;
+}
+p {
+  @apply text-14;
+}
+
+.boilerplate-title {
+  @apply text-16 font-bold text-nc-1 bg-nc-6 p-8 rounded-16 mt-52 mb-20 text-center;
+}
+
+.branding-title {
+  @apply text-16 font-bold text-nc-1 bg-nc-6 p-8 rounded-16 mt-8 mb-12 text-center;
+}
+
+.page-header {
+  @apply flex pb-8 border-solid border-nc-6 border-b align-middle;
+
+  &.no-border {
+    @apply border-b-0;
+  }
+
+  .left-section {
+    @apply flex-1 flex align-middle;
+    .badge-wrapper {
+      line-height: 28px;
+      @apply align-middle;
+    }
+  }
+
+  .right-section {
+    @apply flex-none flex align-middle;
+  }
+
+  .title {
+    @apply text-14 font-barlow inline-block mr-8;
+    line-height: 30px;
+  }
+}
+
+.dealer-title {
+  &.MuiTypography-body1 {
+    @apply font-barlow text-14 normal-case normal-case;
+  }
+}
